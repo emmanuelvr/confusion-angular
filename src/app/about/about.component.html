@@ -56,6 +56,13 @@
 
    <div fxFlex>
      <h2>Corporate Leadership</h2>
-     <p>Display the details of the corporate leaders here</p>
+        <md-list>
+          <md-list-item *ngFor="let leader of leaders">
+            <img src="{{leader.image}}" alt="{{leader.name}}" md-list-avatar>
+            <p md-line>{{ leader.name }} {{ leader.abbr }}</p>
+            <p md-line>{{ leader.designation }}</p>
+            <p md-line>{{ leader.description }}</p>
+          </md-list-item>
+        </md-list>
   </div>
 </div>
